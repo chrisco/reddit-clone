@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="MyApp">
+<html ng-app="redditClone">
 
 <head>
 	<meta charset="utf-8">
@@ -43,9 +43,9 @@
 
 	<div class="jumbotron">
 		<div class="container">
-			<h2>Welcome!</h2>
-			<p>This is simple Reddit clone made with Bootstrap and AngularJS</p>
-			<p><a class="btn btn-primary btn-lg" href="#" role="button">Submit Post</a></p>
+			<h2>A simple Reddit clone</h2>
+			<p>made with Bootstrap and Angular</p>
+			<p><a class="btn btn-primary btn-lg" href="#" role="button">Submit New Post</a></p>
 		</div>
 	</div>
 	<div class="container">
@@ -104,6 +104,25 @@
 					</div>
 				</div>
 			</div>
+			<div class="col-md-12">
+				<div class="well cc-well">
+					<section ng-controller="Rounding">
+						<h3>Hello World - ng-repeat</h3>
+						<select ng-model="selectedRange">
+							<option ng-repeat="range in ranges" ng-pluralize count="range" when="{1: '{{range}} digit', other: '{{range}} digits'}">{{range}}</option>
+						</select>
+						{{selectedRange}}
+					</section>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div ng-controller="RedditController" class="well cc-well">
+					<section ng-model="posts">
+						<h3>Hello World - Reddit Data</h3>
+						{{posts}}
+					</section>
+				</div>
+			</div>
 		</div>
 	</div>
 	<footer class="footer">
@@ -114,7 +133,9 @@
 	<!-- Angular -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js" charset="utf-8"></script>
 	<!-- My app -->
-	<script src="app.js" charset="utf-8"></script>
+	<script src="app/posts.js" charset="utf-8"></script>
+	<script src="app/controllers.js" charset="utf-8"></script>
+	<script src="app/app.js" charset="utf-8"></script>
 </body>
 
 </html>
