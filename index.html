@@ -48,7 +48,7 @@
 			<p><a class="btn btn-primary btn-lg" href="#" role="button">Submit New Post</a></p>
 		</div>
 	</div>
-	<div class="container">
+	<div ng-controller="RedditController" class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="pull-right">
@@ -59,68 +59,26 @@
 					</select>
 				</div>
 			</div>
-
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<div class="well cc-well">
+				<div ng-repeat="post in posts" class="well cc-well">
 					<div class="image-container">
-						<img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Fall05-LongsPeakCU_JPG_RSZ_md.jpg" alt="" />
+						<img ng-src="{{post.imageURL}}"/>
 					</div>
 					<div class="post-info">
-						<h3>Long's Peak | <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+						<h3>{{post.title}} | <i class="fa fa-thumbs-up" aria-hidden="true"></i>
 							<i class="fa fa-thumbs-down" aria-hidden="true"></i></h3>
 						<p class="author">
-							By: Jane Doe
+							By: {{post.author}}
 						</p>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-							in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							{{post.body}}
 						</p>
 						<p>
-							2016-07-21 | <i class="fa fa-comments" aria-hidden="true"></i> Comments | <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Comment
+							{{post.timestamp}} | <i class="fa fa-comments" aria-hidden="true"></i> Comments | <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Comment
 						</p>
 					</div>
-				</div>
-			</div>
-			<div class="col-md-12">
-				<div class="well cc-well">
-					<div class="image-container">
-						<img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Pikes_Peak_from_Garden_of_the_Gods.JPG" alt="" />
-					</div>
-					<div class="post-info">
-						<h3>Pike's Peak | <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-							<i class="fa fa-thumbs-down" aria-hidden="true"></i></h3>
-						<p class="author">
-							By: Jane Doe
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-							in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-						</p>
-						<p>
-							2016-07-21 | <i class="fa fa-comments" aria-hidden="true"></i> Comments | <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Comment
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-12">
-				<div class="well cc-well">
-					<section ng-controller="Rounding">
-						<h3>Hello World - ng-repeat</h3>
-						<select ng-model="selectedRange">
-							<option ng-repeat="range in ranges" ng-pluralize count="range" when="{1: '{{range}} digit', other: '{{range}} digits'}">{{range}}</option>
-						</select>
-						{{selectedRange}}
-					</section>
-				</div>
-			</div>
-			<div class="col-md-12">
-				<div ng-controller="RedditController" class="well cc-well">
-					<section ng-model="posts">
-						<h3>Hello World - Reddit Data</h3>
-						{{posts}}
-					</section>
 				</div>
 			</div>
 		</div>
