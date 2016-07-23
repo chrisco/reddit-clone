@@ -1,11 +1,17 @@
 var posts = [{
-	title: 'Foo',
-	author: 'Bar',
-	image: 'http://foobar.iiitd.edu.in/contest/images/FooBarLogo_cropped.png',
-	desc: 'The terms foobar (/ˈfuːbɑːr/), or foo and others are used as placeholder names (also referred to as metasyntactic variables) in computer programming or computer-related documentation.'
-}, {
-	title: 'Lorem',
-	author: 'Ipsum',
-	image: 'http://foobar.iiitd.edu.in/contest/images/FooBarLogo_cropped.png',
-	desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed elit et velit facilisis tincidunt. Vestibulum lacus felis, placerat eget facilisis tempus, ultrices interdum arcu. Curabitur quis pretium dui. Curabitur a auctor lectus. Curabitur eget consequat tortor, ut commodo dui..'
+	title: "Long's Peak",
+	author: "Alice",
+	image: "http://foobar.iiitd.edu.in/contest/images/FooBarLogo_cropped.png",
+	desc: "Longs Peak is a high and prominent mountain summit in the northern Front Range of the Rocky Mountains of North America. The 14,259-foot (4346 m) fourteener is located in the Rocky Mountain National Park Wilderness, 9.6 miles (15.5 km) southwest by south (bearing 209°) of the Town of Estes Park, Colorado",
+	timestamp: "2016-07-20T14:50:26-06:00",
+	points: 0,
+	addPoints: this.points += 1,
+	subtractPoints: this.points -= 1,
+	comments: [{
+		commenter: "Bob",
+		comment: "Interesting"
+	}, {
+		commenter: "Jane",
+		comment: "Nice!"
+	}]
 }];
