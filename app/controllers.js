@@ -5,12 +5,27 @@ function RedditController($scope) {
 	// Don't show the newPostForm initially:
 	$scope.showNewPostForm = false;
 
-	// Toggle it as needed:
+	// Toggle form as needed:
 	$scope.toggleNewPostForm = function() {
 		if ($scope.showNewPostForm === true) {
 			$scope.showNewPostForm = false;
 		} else {
 			$scope.showNewPostForm = true;
+		}
+	};
+
+	// SHOW/HIDE COMMENTS FEATURE:
+	// TODO: Put this on posts object???
+
+	// Don't show comments initially:
+	$scope.showComments = false;
+
+	// Toggle comments display as needed:
+	$.toggleComments = function() {
+		if ($scope.showComments === true) {
+			$scope.showComments = false;
+		} else {
+			$scope.showComments = true;
 		}
 	};
 
