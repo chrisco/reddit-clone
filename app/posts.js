@@ -10,10 +10,10 @@ var posts = [{
 	commentCount: 2,
 	comments: [{
 		commenter: "Bob",
-		comment: "Interesting!"
+		commentBody: "Interesting!"
 	}, {
 		commenter: "Jane",
-		comment: "Nice!"
+		commentBody: "Wow!"
 	}]
 }, {
 	title: "Pikes Peak",
@@ -30,6 +30,6 @@ var posts = [{
 		commentBody: "Spiffy!"
 	}, {
 		commenter: "John",
-		commentBody: "I like it!"
+		commentBody: "Yowzers!"
 	}]
 }];
