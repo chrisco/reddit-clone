@@ -50,4 +50,23 @@ function RedditController($scope) {
 		$scope.newPostForm.postBody = "";
 		$scope.showNewPostForm = false;
 	};
+
+	// Create new comment:
+	$scope.createNewComment = function() {
+		// Create the new post:
+		var newComment = {};
+		newComment.commenter = $scope.newCommentForm.commenter;
+		newCOmment.commentBody = $scope.newCommentForm.commentBody;
+
+		// Push it to the array of posts:
+		this.comments.push(newComment);
+
+		// Reset the new comment form:
+		$scope.newCommentForm.commenter = "";
+		$scope.newCommentForm.commentBody = "";
+		$scope.showNewCommentForm = false;
+	};
 }
+
+// Needs to be a "new comment" form that is hidden initially.
+// Where to put it, why, and how?

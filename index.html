@@ -32,7 +32,7 @@
 					<div class="form-group">
 					</div>
 					<div class="form-group">
-						<input type="search" placeholder="Search" class="form-control">
+						<input type="search" placeholder="Search Posts" class="form-control">
 					</div>
 				</form>
 			</div>
@@ -109,7 +109,7 @@
 							{{post.postBody}}
 						</p>
 						<p>
-							{{post.timestamp | date: "EEE, MMM d, y h:mm a"}} | <a href="" ng-click="post.toggleComments()"><i class="fa fa-comments" aria-hidden="true"></i> Comments</a> | <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Comment
+							{{post.timestamp | date: "EEE, MMM d, y h:mm a"}} | <a href="" ng-click="post.toggleComments()"><i class="fa fa-comments" aria-hidden="true"></i> Comments</a> | <a href="#" ng-click="post.addComment()" ><i class="fa fa-plus-circle" aria-hidden="true"></i> Add Comment</a>
 						</p>
 						<div ng-show="post.showComments" ng-repeat="comment in post.comments" class="well cc-well">
 							<span class="commenter">
