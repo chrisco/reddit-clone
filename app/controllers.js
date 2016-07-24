@@ -14,21 +14,6 @@ function RedditController($scope) {
 		}
 	};
 
-	// SHOW/HIDE COMMENTS FEATURE:
-	// TODO: Put this on posts object???
-
-	// Don't show comments initially:
-	$scope.showComments = false;
-
-	// Toggle comments display as needed:
-	$.toggleComments = function() {
-		if ($scope.showComments === true) {
-			$scope.showComments = false;
-		} else {
-			$scope.showComments = true;
-		}
-	};
-
 	$scope.createNewPost = function() {
 		// Create the new post:
 		var newPost = {};
@@ -46,6 +31,14 @@ function RedditController($scope) {
 		};
 		newPost.commentCount = 0;
 		newPost.comments = [];
+		newPost.showComments = false;
+		newPost.toggleComments = function() {
+			if (this.showComments === true) {
+				this.showComments = false;
+			} else {
+				this.showComments = true;
+			}
+		};
 
 		// Push it to the array of posts:
 		posts.push(newPost);

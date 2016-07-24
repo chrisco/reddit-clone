@@ -109,9 +109,9 @@
 							{{post.postBody}}
 						</p>
 						<p>
-							{{post.timestamp | date: "EEE, MMM d, y h:mm a"}} | <i class="fa fa-comments" aria-hidden="true"></i> Comments | <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Comment
+							{{post.timestamp | date: "EEE, MMM d, y h:mm a"}} | <a href="" ng-click="post.toggleComments()"><i class="fa fa-comments" aria-hidden="true"></i> Comments</a> | <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Comment
 						</p>
-						<div ng-repeat="comment in post.comments" class="well cc-well">
+						<div ng-show="post.showComments" ng-repeat="comment in post.comments" class="well cc-well">
 							<span class="commenter">
 								{{comment.commenter}}&nbsp;-&nbsp;
 							</span>

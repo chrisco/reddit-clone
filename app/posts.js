@@ -14,7 +14,15 @@ var posts = [{
 	}, {
 		commenter: "Jane",
 		commentBody: "Wow!"
-	}]
+	}],
+	showComments: false,
+	toggleComments: function() {
+		if (this.showComments === true) {
+			this.showComments = false;
+		} else {
+			this.showComments = true;
+		}
+	},
 }, {
 	title: "Pikes Peak",
 	author: "Bob",
@@ -31,5 +39,13 @@ var posts = [{
 	}, {
 		commenter: "John",
 		commentBody: "Yowzers!"
-	}]
+	}],
+	showComments: false,
+	toggleComments: function() {
+		if (this.showComments === true) {
+			this.showComments = false;
+		} else {
+			this.showComments = true;
+		}
+	},
 }];
