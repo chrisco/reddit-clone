@@ -39,6 +39,14 @@ function RedditController($scope) {
 				this.showComments = true;
 			}
 		};
+		newPost.showNewCommentForm = false,
+			newPost.toggleNewCommentsForm = function() {
+				if (this.showNewCommentForm === true) {
+					this.showNewCommentForm = false;
+				} else {
+					this.showNewCommentForm = true;
+				}
+			};
 
 		// Push it to the array of posts:
 		posts.push(newPost);
@@ -55,16 +63,16 @@ function RedditController($scope) {
 	$scope.createNewComment = function() {
 		// Create the new post:
 		var newComment = {};
-		newComment.commenter = $scope.newCommentForm.commenter;
-		newCOmment.commentBody = $scope.newCommentForm.commentBody;
+		newComment.commenter = this.newCommentForm.commenter;
+		newComment.commentBody = this.newCommentForm.commentBody;
 
 		// Push it to the array of posts:
-		this.comments.push(newComment);
+		this.post.comments.push(newComment);
 
 		// Reset the new comment form:
-		$scope.newCommentForm.commenter = "";
-		$scope.newCommentForm.commentBody = "";
-		$scope.showNewCommentForm = false;
+		this.newCommentForm.commenter = "";
+		this.newCommentForm.commentBody = "";
+		this.post.showNewCommentForm = false;
 	};
 }
 

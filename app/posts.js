@@ -23,6 +23,14 @@ var posts = [{
 			this.showComments = true;
 		}
 	},
+	showNewCommentForm: false,
+	toggleNewCommentsForm: function() {
+		if (this.showNewCommentForm === true) {
+			this.showNewCommentForm = false;
+		} else {
+			this.showNewCommentForm = true;
+		}
+	}
 }, {
 	title: "Pikes Peak",
 	author: "Bob",
@@ -48,4 +56,12 @@ var posts = [{
 			this.showComments = true;
 		}
 	},
+	showNewCommentForm: false,
+	toggleNewCommentsForm: function() {
+		if (this.showNewCommentForm === true) {
+			this.showNewCommentForm = false;
+		} else {
+			this.showNewCommentForm = true;
+		}
+	}
 }];
