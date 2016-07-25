@@ -24,23 +24,23 @@ $ open index.html
 
 ## Specs
 
-* DONE: All post data should only be stored in a controller or service.
-* DONE: A page refresh will clear all added posts.
-* DONE: You do not have to make any ajax requests or actually contact the reddit API.
-* DONE: Each post has a title, author, image, and description.
-* TODO: Each post's date/time is displayed nicely: "Yesterday at 3:09pm", "Last Thursday at 4:42am", etc. You will need an external library. Watch the video for more details.
-* DONE: A user can upvote / downvote posts.
-* TODO: Posts dynamically reorder according to number of votes.
-* DONE: A user can create new posts.
-* V1 DONE: A user cannot create a new post if any of the 4 inputs are blank. Research angular validations. See the video for an example implementation.
-* DONE: A user can click to view existing comments on a specific post.
-* DONE: The number of comments is correctly pluralized.
-* DONE: A user can add a new comment to a specific post.
-* TODO: The new post form and comment forms can be toggled on and off.
-* TODO: A user can search through posts.
-* DONE: A user can sort posts by votes, date, and title.
-* TODO: Animate posts as they are added and removed from the search results. Research Angular animations. See the video for an example implementation and links below for hints.
-* V1 DONE: Style the app. It should look better than my implementation.
+* All post data should only be stored in a controller or service.
+* A page refresh will clear all added posts.
+* You do not have to make any ajax requests or actually contact the reddit API.
+* Each post has a title, author, image, and description.
+* __TODO__: Each post's date/time is displayed nicely: "Yesterday at 3:09pm", "Last Thursday at 4:42am", etc. You will need an external library. Watch the video for more details.
+* A user can upvote / downvote posts.
+* Posts dynamically reorder according to number of votes.
+* A user can create new posts.
+* __V1 DONE__: A user cannot create a new post if any of the 4 inputs are blank. Research angular validations. See the video for an example implementation.
+* A user can click to view existing comments on a specific post.
+* The number of comments is correctly pluralized.
+* A user can add a new comment to a specific post.
+* The new post form and comment forms can be toggled on and off.
+* A user can search through posts.
+* A user can sort posts by votes, date, and title.
+* __TODO__: Animate posts as they are added and removed from the search results. Research Angular animations. See the video for an example implementation and links below for hints.
+* __V1 DONE__: Style the app. It should look better than my implementation.
 
 __Bonus Features__
 

@@ -50,9 +50,6 @@ var posts = [{
 	comments: [{
 		commenter: "Alice",
 		commentBody: "Spiffy!"
-	}, {
-		commenter: "John",
-		commentBody: "Yowzers!"
 	}],
 	showComments: false,
 	toggleComments: function() {
