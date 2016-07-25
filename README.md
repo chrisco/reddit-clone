@@ -29,7 +29,7 @@ $ open index.html
 * DONE: You do not have to make any ajax requests or actually contact the reddit API.
 * DONE: Each post has a title, author, image, and description.
 * TODO: Each post's date/time is displayed nicely: "Yesterday at 3:09pm", "Last Thursday at 4:42am", etc. You will need an external library. Watch the video for more details.
-* TODO: A user can upvote / downvote posts.
+* DONE: A user can upvote / downvote posts.
 * TODO: Posts dynamically reorder according to number of votes.
 * DONE: A user can create new posts.
 * V1 DONE: A user cannot create a new post if any of the 4 inputs are blank. Research angular validations. See the video for an example implementation.

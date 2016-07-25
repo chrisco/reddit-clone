@@ -104,8 +104,8 @@
 						<img ng-src="{{post.imageURL}}" />
 					</div>
 					<div class="post-info">
-						<h3>{{post.title}} | <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-							<i class="fa fa-thumbs-down" aria-hidden="true"></i> {{post.points}}</h3>
+						<h3>{{post.title}} | <a href=""><i ng-click="post.addPoints()" class="fa fa-thumbs-up green" aria-hidden="true"></i></a>
+							<a href=""><i ng-click="post.subtractPoints()" class="fa fa-thumbs-down red" aria-hidden="true"></i></a> <span ng-class="{green: post.points > 0, red: post.points < 0}">{{post.points}}</span></h3>
 						<p class="author">
 							By: {{post.author}}
 						</p>

@@ -26,3 +26,9 @@ img {
 .sort-by label {
 	font-weight: normal;
 }
+.green {
+	color: green;
+}
+.red {
+	color: red;
+}
