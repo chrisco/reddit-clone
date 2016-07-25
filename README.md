@@ -39,7 +39,7 @@ $ open index.html
 * The new post form and comment forms can be toggled on and off.
 * A user can search through posts.
 * A user can sort posts by votes, date, and title.
-* __TODO__: Animate posts as they are added and removed from the search results. Research Angular animations. See the video for an example implementation and links below for hints.
+* __DOING__: Animate posts as they are added and removed from the search results. Research Angular animations. See the video for an example implementation and links below for hints.
 * __V1 DONE__: Style the app. It should look better than my implementation.
 
 __Bonus Features__

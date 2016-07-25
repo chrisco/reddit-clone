@@ -1,2 +1,2 @@
-angular.module("redditClone", [])
+angular.module("redditClone", ['ngAnimate'])
 	.controller("RedditController", RedditController);
