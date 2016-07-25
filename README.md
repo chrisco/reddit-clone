@@ -38,7 +38,7 @@ $ open index.html
 * DONE: A user can add a new comment to a specific post.
 * TODO: The new post form and comment forms can be toggled on and off.
 * TODO: A user can search through posts.
-* TODO: A user can sort posts by votes, date, and title.
+* DONE: A user can sort posts by votes, date, and title.
 * TODO: Animate posts as they are added and removed from the search results. Research Angular animations. See the video for an example implementation and links below for hints.
 * V1 DONE: Style the app. It should look better than my implementation.
 

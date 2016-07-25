@@ -75,7 +75,7 @@ function RedditController($scope) {
 		this.post.showNewCommentForm = false;
 	};
 
-
+	$scope.sortBy = "-points";
 }
 
 // Needs to be a "new comment" form that is hidden initially.

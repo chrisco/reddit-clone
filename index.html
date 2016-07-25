@@ -87,19 +87,19 @@
 				<div class="pull-right sort-by">
 					<label for="sort">Filter by: </label>
 					<select ng-model="sortBy" class="" name="sortBy">
-						<option value="da" ng-selected="true">Date (ascending)</option>
-						<option value="dd">Date (descending)</option>
-						<option value="ta">Title (ascending)</option>
-						<option value="td">Title (descending)</option>
-						<option value="va">Votes (ascending)</option>
-						<option value="vd">Votes (descending)</option>
+						<option value="points">Votes (Least First)</option>
+						<option value="-points">Votes (Most First)</option>
+						<option value="-timestamp">Date (Newest First)</option>
+						<option value="timestamp">Date (Oldest First)</option>
+						<option value="title">Title (A-Z)</option>
+						<option value="-title">Title (Z-A)</option>
 					</select>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-				<div ng-repeat="post in posts" class="well cc-well">
+				<div ng-repeat="post in posts | orderBy: sortBy" class="well cc-well">
 					<div class="image-container">
 						<img ng-src="{{post.imageURL}}" />
 					</div>
