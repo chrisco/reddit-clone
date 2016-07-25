@@ -70,8 +70,7 @@ function RedditController($scope) {
 		this.post.comments.push(newComment);
 
 		// Reset the new comment form:
-		this.newCommentForm.commenter = "";
-		this.newCommentForm.commentBody = "";
+		this.newCommentForm = {};
 		this.post.showNewCommentForm = false;
 	};
 

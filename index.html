@@ -103,7 +103,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div ng-repeat="post in posts | orderBy: sortBy | filter: searchPosts" class="well cc-well">
-					<div class="image-container">
+					<div class="image-container" ng-animate="'animate'">
 						<img ng-src="{{post.imageURL}}" />
 					</div>
 					<div class="post-info">
