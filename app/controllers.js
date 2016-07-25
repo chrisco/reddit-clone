@@ -74,6 +74,8 @@ function RedditController($scope) {
 		this.newCommentForm.commentBody = "";
 		this.post.showNewCommentForm = false;
 	};
+
+
 }
 
 // Needs to be a "new comment" form that is hidden initially.

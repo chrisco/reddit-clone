@@ -84,11 +84,15 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="pull-right">
-					<label for="filter">Filter by: </label>
-					<select class="" name="filter">
-						<option value="date">Date</option>
-						<option value="votes">Votes</option>
+				<div class="pull-right sort-by">
+					<label for="sort">Filter by: </label>
+					<select ng-model="sortBy" class="" name="sortBy">
+						<option value="da" ng-selected="true">Date (ascending)</option>
+						<option value="dd">Date (descending)</option>
+						<option value="ta">Title (ascending)</option>
+						<option value="td">Title (descending)</option>
+						<option value="va">Votes (ascending)</option>
+						<option value="vd">Votes (descending)</option>
 					</select>
 				</div>
 			</div>
@@ -109,7 +113,7 @@
 							{{post.postBody}}
 						</p>
 						<p>
-							{{post.timestamp | date: "EEE, MMM d, y h:mm a"}} | <a href="" ng-click="post.toggleComments()"><i class="fa fa-comments" aria-hidden="true"></i> Comments</a> | <a href="" ng-click="post.toggleNewCommentsForm()"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add Comment</a>
+							{{post.timestamp | date: "EEE, MMM d, y h:mm a"}} | <a href="" ng-click="post.toggleComments()"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;{{post.comments.length}} <ng-pluralize count="post.comments.length" when="{'1': 'Comment','other': 'Comments'}"></ng-pluralize></a>							| <a href="" ng-click="post.toggleNewCommentsForm()"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add Comment</a>
 						</p>
 						<div ng-show="post.showNewCommentForm" class="well cc-well">
 							<form ng-submit="createNewComment()" name="newCommentForm" class="form-horizontal col-md-9">

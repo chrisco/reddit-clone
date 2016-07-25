@@ -23,3 +23,6 @@ img {
 .commenter {
 	font-weight: bold;
 }
+.sort-by label {
+	font-weight: normal;
+}

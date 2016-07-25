@@ -7,7 +7,6 @@ var posts = [{
 	points: 0,
 	addPoints: this.points += 1,
 	subtractPoints: this.points -= 1,
-	commentCount: 2,
 	comments: [{
 		commenter: "Bob",
 		commentBody: "Interesting!"
@@ -40,7 +39,6 @@ var posts = [{
 	points: 0,
 	addPoints: this.points += 1,
 	subtractPoints: this.points -= 1,
-	commentCount: 2,
 	comments: [{
 		commenter: "Alice",
 		commentBody: "Spiffy!"
