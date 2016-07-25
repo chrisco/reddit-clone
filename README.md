@@ -44,9 +44,9 @@ $ open index.html
 
 __Bonus Features__
 
-* TODO: A user can choose to sort ascending or descending.
-* TODO: A user can favorite posts and view all favorites in a separate tab.
-* TODO: A user can upload an image (no backend involved).
+* A user can choose to sort ascending or descending.
+* __TODO__: A user can favorite posts and view all favorites in a separate tab.
+* __TODO__: A user can upload an image (no backend involved).
 
 __Animation-related Links__
 
