@@ -1,8 +1,8 @@
 # Simple Reddit Clone With Bootstrap and AngularJS
 
-![Screenshot](reddit-clone.gif)
-
 A small project to practice AngularJS.
+
+![Screenshot](reddit-clone.gif)
 
 ## Built With
 
