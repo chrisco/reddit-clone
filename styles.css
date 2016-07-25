@@ -32,7 +32,7 @@ img {
 .red {
 	color: red;
 }
-.ng-enter {
+/*.ng-enter {
 	transition: 0.4s ease all;
 	opacity   : 0;
 	transform : translateX(-100%);
@@ -40,7 +40,7 @@ img {
 .ng-enter.ng-enter-active {
 	opacity  : 1;
 	transform: translateX(0);
-}
+}*/
 /*.ng-leave {
 	transition: 0.4s ease all;
 	opacity   : 1;
@@ -50,8 +50,14 @@ img {
 	opacity  : 0;
 	transform: translateX(-100%);
 }*/
-.ng-enter-stagger,
+/*.ng-enter-stagger,
 .ng-leave-stagger {
 	transition-delay   : 0.2s;
 	transition-duration: 0;
+}*/
+.ng-enter {
+	animation: fadeInRight 0.5s;
+}
+.ng-leave {
+	animation: fadeOutRight 0.5s;
 }
