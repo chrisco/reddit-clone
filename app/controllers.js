@@ -6,41 +6,42 @@ function RedditController($scope) {
   $scope.showNewPostForm = false;
 
   // Toggle form as needed:
-  $scope.toggleNewPostForm = function() {
-    if ($scope.showNewPostForm === true) {
+  $scope.toggleNewPostForm = function toggleNewPostForm() {
+    if ($scope.showNewPostForm) {
       $scope.showNewPostForm = false;
     } else {
       $scope.showNewPostForm = true;
     }
   };
 
-  $scope.createNewPost = function() {
+  $scope.createNewPost = function createNewPost() {
     // Create the new post:
-    var newPost = {};
+    const newPost = {};
     newPost.title = $scope.newPostForm.title;
     newPost.author = $scope.newPostForm.author;
     newPost.imageURL = $scope.newPostForm.imageURL;
     newPost.postBody = $scope.newPostForm.postBody;
     newPost.timestamp = new Date();
     newPost.points = 0;
-    newPost.addPoints = function() {
+    newPost.addPoints = function addPoints() {
       this.points += 1;
     };
-    newPost.subtractPoints = function() {
+    newPost.subtractPoints = function subtractPoints() {
       this.points -= 1;
     };
     newPost.commentCount = 0;
     newPost.comments = [];
     newPost.showComments = false;
-    newPost.toggleComments = function() {
-      if (this.showComments === true) {
+    newPost.toggleComments = function toggleComments() {
+      if (this.showComments) {
         this.showComments = false;
       } else {
         this.showComments = true;
       }
     };
-    newPost.showNewCommentForm = false, newPost.toggleNewCommentsForm = function() {
-      if (this.showNewCommentForm === true) {
+    newPost.showNewCommentForm = false;
+    newPost.toggleNewCommentsForm = function toggleNewCommentsForm() {
+      if (this.showNewCommentForm) {
         this.showNewCommentForm = false;
       } else {
         this.showNewCommentForm = true;
@@ -59,9 +60,9 @@ function RedditController($scope) {
   };
 
   // Create new comment:
-  $scope.createNewComment = function() {
+  $scope.createNewComment = function createNewComment() {
     // Create the new post:
-    var newComment = {};
+    const newComment = {};
     newComment.commenter = this.newCommentForm.commenter;
     newComment.commentBody = this.newCommentForm.commentBody;
 

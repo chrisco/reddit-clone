@@ -46,12 +46,14 @@ __Bonus Features__
 
 * A user can choose to sort ascending or descending.
 * __TODO__: A user can favorite posts and view all favorites in a separate tab.
+* __TODO__: Add persistence (localStorage, initially).
+* __TODO__: Add gulp tasks to minify and pipe to dist/docs folder and deploy.
 * __TODO__: A user can upload an image (no backend involved).
 
 __Animation-related Links__
 
 * http://plnkr.co/edit/qrQwv1?p=preview
-* https://divshot.com/blog/tips-and-tricks/Angular-1-2-and-animate-css/
+* https://divshot.com/blog/tips-and-tricks/Angular-1-2-and-animate-css
 * http://odetocode.com/blogs/scott/archive/2014/02/25/easy-animations-for-Angularjs-with-animate-css.aspx
 
 __Other Links__
