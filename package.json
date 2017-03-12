@@ -1,0 +1,27 @@
+{
+  "name": "reddit-clone",
+  "version": "1.0.0",
+  "description": "A small project to practice AngularJS 1.5.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisco/reddit-clone.git"
+  },
+  "keywords": [],
+  "author": "Christopher Comella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisco/reddit-clone/issues"
+  },
+  "homepage": "https://github.com/chrisco/reddit-clone#readme",
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0"
+  }
+}

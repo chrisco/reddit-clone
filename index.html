@@ -2,94 +2,94 @@
 <html ng-app="redditClone" ng-cloak>
 
 <head>
-	<meta charset="utf-8">
-	<title>Reddit Clone</title>
-	<!-- Bootstrap's latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <title>Reddit Clone</title>
+  <!-- Bootstrap's latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-	<!-- Font Awesome -->
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
-	<!-- Animate.css stylesheet -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+  <!-- Animate.css stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
 
-	<!-- My stylesheet -->
-	<link rel="stylesheet" href="styles.css" charset="utf-8">
+  <!-- My stylesheet -->
+  <link rel="stylesheet" href="styles.css" charset="utf-8">
 </head>
 
 <body ng-controller="RedditController">
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="/">Reddit Clone</a>
-			</div>
-			<!--/.navbar-header -->
-			<div id="navbar" class="navbar-collapse collapse">
-				<form class="navbar-form navbar-right">
-					<div class="form-group">
-					</div>
-					<div class="form-group">
-						<input ng-model="searchPosts" type="search" placeholder="Search Posts" class="form-control">
-					</div>
-				</form>
-			</div>
-			<!--/.navbar-collapse collapse -->
-		</div>
-		<!--/.container -->
-	</nav>
+        <a class="navbar-brand" href="/">Reddit Clone</a>
+      </div>
+      <!--/.navbar-header -->
+      <div id="navbar" class="navbar-collapse collapse">
+        <form class="navbar-form navbar-right">
+          <div class="form-group">
+          </div>
+          <div class="form-group">
+            <input ng-model="searchPosts" type="search" placeholder="Search Posts" class="form-control">
+          </div>
+        </form>
+      </div>
+      <!--/.navbar-collapse collapse -->
+    </div>
+    <!--/.container -->
+  </nav>
 
-	<div class="jumbotron">
-		<div class="container">
-			<h2>A simple Reddit clone</h2>
-			<p>made with Bootstrap and Angular</p>
-			<p><a ng-click="toggleNewPostForm()" class="btn btn-primary btn-lg" href="#" role="button">Create New Post</a></p>
-		</div>
-		<div ng-show="showNewPostForm" class="container">
-			<form ng-submit="createNewPost()" name="newPostForm" class="form-horizontal col-md-7 col-md-offset-2">
-				<div class="form-group">
-					<label for="title" class="col-sm-2 control-label">Title:</label>
-					<div class="col-sm-10">
-						<input ng-model="newPostForm.title" type="text" class="form-control" id="title" placeholder="Title" autofocus required>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="author" class="col-sm-2 control-label">Author:</label>
-					<div class="col-sm-10">
-						<input ng-model="newPostForm.author" type="text" class="form-control" id="author" placeholder="Author" required>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="imageURL" class="col-sm-2 control-label">Image URL:</label>
-					<div class="col-sm-10">
-						<input ng-model="newPostForm.imageURL" type="text" class="form-control" id="imageURL" placeholder="Image URL" required>
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="postBody" class="col-sm-2 control-label">Post Body:</label>
-					<div class="col-sm-10">
-						<input ng-model="newPostForm.postBody" type="text" class="form-control" id="postBody" placeholder="Post Body" required>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10">
-						<button type="submit" class="btn btn-default">Submit</button>
-					</div>
-				</div>
-			</form>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="pull-right sort-by">
-					<label for="sort">Filter by: </label>
-					<select ng-model="sortBy" class="" name="sortBy">
+  <div class="jumbotron">
+    <div class="container">
+      <h2>A simple Reddit clone</h2>
+      <p>made with Bootstrap and Angular</p>
+      <p><a ng-click="toggleNewPostForm()" class="btn btn-primary btn-lg" href="#" role="button">Create New Post</a></p>
+    </div>
+    <div ng-show="showNewPostForm" class="container">
+      <form ng-submit="createNewPost()" name="newPostForm" class="form-horizontal col-md-7 col-md-offset-2">
+        <div class="form-group">
+          <label for="title" class="col-sm-2 control-label">Title:</label>
+          <div class="col-sm-10">
+            <input ng-model="newPostForm.title" type="text" class="form-control" id="title" placeholder="Title" autofocus required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="author" class="col-sm-2 control-label">Author:</label>
+          <div class="col-sm-10">
+            <input ng-model="newPostForm.author" type="text" class="form-control" id="author" placeholder="Author" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="imageURL" class="col-sm-2 control-label">Image URL:</label>
+          <div class="col-sm-10">
+            <input ng-model="newPostForm.imageURL" type="text" class="form-control" id="imageURL" placeholder="Image URL" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="postBody" class="col-sm-2 control-label">Post Body:</label>
+          <div class="col-sm-10">
+            <input ng-model="newPostForm.postBody" type="text" class="form-control" id="postBody" placeholder="Post Body" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="pull-right sort-by">
+          <label for="sort">Filter by: </label>
+          <select ng-model="sortBy" class="" name="sortBy">
 						<option value="points">Votes (Least First)</option>
 						<option value="-points">Votes (Most First)</option>
 						<option value="timestamp">Date (Newest First)</option>
@@ -97,72 +97,72 @@
 						<option value="title">Title (A-Z)</option>
 						<option value="-title">Title (Z-A)</option>
 					</select>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<div ng-repeat="post in posts | orderBy: sortBy | filter: searchPosts" class="well cc-well">
-					<div class="image-container" ng-animate="'animate'">
-						<img ng-src="{{post.imageURL}}" />
-					</div>
-					<div class="post-info">
-						<h3>{{post.title}} | <a href=""><i ng-click="post.addPoints()" class="fa fa-thumbs-up green" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div ng-repeat="post in posts | orderBy: sortBy | filter: searchPosts" class="well cc-well">
+          <div class="image-container" ng-animate="'animate'">
+            <img ng-src="{{post.imageURL}}" />
+          </div>
+          <div class="post-info">
+            <h3>{{post.title}} | <a href=""><i ng-click="post.addPoints()" class="fa fa-thumbs-up green" aria-hidden="true"></i></a>
 							<a href=""><i ng-click="post.subtractPoints()" class="fa fa-thumbs-down red" aria-hidden="true"></i></a> <span ng-class="{green: post.points > 0, red: post.points < 0}">{{post.points}}</span></h3>
-						<p class="author">
-							By: {{post.author}}
-						</p>
-						<p>
-							{{post.postBody}}
-						</p>
-						<p>
-							{{post.timestamp | date: "EEE, MMM d, y h:mm a"}} | <a href="" ng-click="post.toggleComments()"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;{{post.comments.length}} <ng-pluralize count="post.comments.length" when="{'1': 'Comment','other': 'Comments'}"></ng-pluralize></a>							| <a href="" ng-click="post.toggleNewCommentsForm()"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add Comment</a>
-						</p>
-						<div ng-show="post.showNewCommentForm" class="well cc-well">
-							<form ng-submit="createNewComment()" name="newCommentForm" class="form-horizontal col-md-9">
-								<div class="form-group">
-									<label for="commenter" class="col-sm-4 control-label">Author:</label>
-									<div class="col-sm-8">
-										<input ng-model="newCommentForm.commenter" type="text" class="form-control" id="commenter" placeholder="Author" autofocus required>
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="commentBody" class="col-sm-4 control-label">Comment:</label>
-									<div class="col-sm-8">
-										<input ng-model="newCommentForm.commentBody" type="text" class="form-control" id="commentBody" placeholder="Comment" required>
-									</div>
-								</div>
-								<div class="form-group">
-									<div class="col-sm-offset-4 col-sm-8">
-										<button type="submit" class="btn btn-default">Submit</button>
-									</div>
-								</div>
-							</form>
-						</div>
-						<div ng-show="post.showComments" ng-repeat="comment in post.comments" class="well cc-well">
-							<span class="commenter">
+            <p class="author">
+              By: {{post.author}}
+            </p>
+            <p>
+              {{post.postBody}}
+            </p>
+            <p>
+              {{post.timestamp | date: "EEE, MMM d, y h:mm a"}} | <a href="" ng-click="post.toggleComments()"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;{{post.comments.length}} <ng-pluralize count="post.comments.length" when="{'1': 'Comment','other': 'Comments'}"></ng-pluralize></a>              | <a href="" ng-click="post.toggleNewCommentsForm()"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add Comment</a>
+            </p>
+            <div ng-show="post.showNewCommentForm" class="well cc-well">
+              <form ng-submit="createNewComment()" name="newCommentForm" class="form-horizontal col-md-9">
+                <div class="form-group">
+                  <label for="commenter" class="col-sm-4 control-label">Author:</label>
+                  <div class="col-sm-8">
+                    <input ng-model="newCommentForm.commenter" type="text" class="form-control" id="commenter" placeholder="Author" autofocus required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="commentBody" class="col-sm-4 control-label">Comment:</label>
+                  <div class="col-sm-8">
+                    <input ng-model="newCommentForm.commentBody" type="text" class="form-control" id="commentBody" placeholder="Comment" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-4 col-sm-8">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div ng-show="post.showComments" ng-repeat="comment in post.comments" class="well cc-well">
+              <span class="commenter">
 								{{comment.commenter}}&nbsp;-&nbsp;
 							</span>
-							<span>
+              <span>
 								{{comment.commentBody}}
 							</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<footer class="footer">
-			<div class="container">
-				<p class="text-muted">&copy; 2016 Christopher Comella</p>
-			</div>
-		</footer>
-		<!-- Angular -->
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js" charset="utf-8"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.js"></script>
-		<!-- My app -->
-		<script src="app/posts.js" charset="utf-8"></script>
-		<script src="app/controllers.js" charset="utf-8"></script>
-		<script src="app/app.js" charset="utf-8"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">&copy; 2016 Christopher Comella</p>
+      </div>
+    </footer>
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.js"></script>
+    <!-- My app -->
+    <script src="app/posts.js" charset="utf-8"></script>
+    <script src="app/controllers.js" charset="utf-8"></script>
+    <script src="app/app.js" charset="utf-8"></script>
 </body>
 
 </html>

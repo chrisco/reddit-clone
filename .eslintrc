@@ -1,0 +1,23 @@
+# From: http://www.acuriousanimal.com/2016/08/14/configuring-atom-with-eslint.html
+# Then I began editing it
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "rules": {
+    "no-unused-vars": ["warn", { "vars": "all", "args": "after-used" }],
+    "no-plusplus": ["warn", { "allowForLoopAfterthoughts": true }],
+    "no-shadow": "warn",
+    "operator-assignment": "warn",
+    "no-param-reassign": "warn",
+    "import/no-extraneous-dependencies": ["warn", {"devDependencies": false, "optionalDependencies": false, "peerDependencies": false}],
+    "arrow-body-style": "warn",
+    "no-new": "warn",
+    "comma-dangle": "warn", // Changed from ERROR to WARN Because, in app/assets/gulp/tasks/modernizr.js, putting a comma where I commented breaks things.
+    "no-undef": "warn", // Changed from ERROR to WARN Because, in app/assets/scripts/modules/StickyHeader.js, where I commented, ESLint was ERRORing.
+  }
+}
